@@ -23,14 +23,14 @@ If you choose a glyph_size that means the glyph is scaled to be bigger than the 
 
 Example:
 
-./glyph2jpg path_to_font image_width image_height xpad ypad depth glyphcode glyph_size output.jpg
-
-./glyph2jpg Organo.ttf 990 950 5 5 1 99 250 output.jpg
+./glyph2jpg Chunkfive.otf 990 990 5 5 1 106 248 output.jpg
 
 yields:
 
 ![b glyph rendered to jpg](output.jpg)
 
-Note that the glyph is centered in the rendered jpg, and bottom justified (after padding)
+Note that the glyph is centered in the rendered jpg, and bottom justified (after padding). The width could be reduced in this case to make a smaller image, but in this case the image is square having total dimensions 1000x1000.
 
-test.sh generates ascii a..Z in an output directory called output
+When rendering an entire set of glyphs for a font, a run through of all glyphs is needed to get the correct scaling for a given image size. So that they all fit.
+
+test.sh generates ascii a..Z in an output directory called output and can be used for the purpose of determining this
