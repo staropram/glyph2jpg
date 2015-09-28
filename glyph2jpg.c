@@ -17,7 +17,7 @@ FT_Face ftface;
  * @param target_height The width of the generated image before padding.
  * @param xpad Horizontal padding on both sides of the image.
  * @param ypad Vertical padding on both sides of the image.
- * @param depth Image depth, 1 for monochrome, 3 for RGB.
+ * @param depth Image depth, 1 for grayscale , 3 for RGB.
  *
  * @return 0 on success, 1 otherwise.
  */
@@ -179,7 +179,7 @@ int main(int argc, char **argv) {
 	// process cmdline args
 	if(argc!=10) {
 		printf("USAGE:\n\tglyph2jpg path_to_font width height xpad ypad depth glyph glyph_size out.jpg\n");
-		printf("\n\tdepth is either 1 for monochrome or 3 for RGB\n");
+		printf("\n\tdepth is either 1 for grayscale or 3 for RGB\n");
 		return 0;
 	}
 
